@@ -19,23 +19,21 @@ class MyAppBar extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Stories(name: creators[index]);
                 })),
-        Expanded(
-          child: Column(
-            children: [
-              SizedBox(
-                height: 220,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    ExercisesCards(
-                      title: 'Reference 1',
-                      subTitle: 'Back and Biceps',
-                    ),
-                  ],
-                ),
+        Column(
+          children: [
+            SizedBox(
+              height: 220,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  ExercisesCards(
+                    title: 'Reference 1',
+                    subTitle: 'Back and Biceps',
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         Column(
           children: [VideoCard(), VideoCard(), VideoCard()],
